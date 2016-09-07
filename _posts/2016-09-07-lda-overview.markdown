@@ -11,38 +11,43 @@ I'm not going to try and understand LDA in its full scientific or mathematical d
 
 I learn by writing things down so let's see where this goes:
 
-## Assumptions
+## We Know
 
-Say we have 1000 documents.
+We have 1000 documents.
 
-Let's make some huge assumptions:
+## We Assume
 
-1. Distributed across these documents we have 10 topics. We don't know the topics and we don't know which document has which of these mystery topics.  
+To keep things simple we'll make some very simple assumptions:
 
-2. Each topic is made up of a bag of words, each word being unique to each topic. In other words:
+1. We have 10 topics in these 1000 documents.   
+1. Each topic is made up of a bag of words. No two topics have the same word e.g:
 
-Topic 'Dirty' has the words 'dirty', 'stained', 'yellowing', 'filthy', 'marked'
-Topic 'Rude' has the words 'rude', 'unhelpful', 'unpleasant', 'aggressive'
+    1. If one of the unknown topics was topics was, say, **'Dirty'** we would expect the words in the bag to be 'dirty', 'stained', 'yellowing', 'filthy', 'marked'.
+    1. Another topic my be **'Rude'** and would have the words 'rude', 'unhelpful', 'unpleasant', 'aggressive'.
 
-The meaning of each topic above is obvious but remember at this stage we don't know the topics and we don't know the words in any of the 10 topic's bag of words.
+1. Let's make a really big assumption just to make this example as clear as possible - we'd never do this in a real life example. Let's assume these topics are evenly distributed and each document only has 1 topic. In other words, in our 1000 documents there are 10 topics, each topic having 100 documents.
 
-3. Let's make an even bigger assumption that isn't necessary for LDA but I'm going to use it to make this example as clear as possible. Let's assume these topics are evenly distributed and each document only has 1 topic. In other words, in our 1000 documents there are 10 topics, each topic having 100 documents.
+## Getting Started
 
-## Stage 1.
+So we believe that there are 10 topics and each document has only one topic. So for any given document the distribution of topics in that document is:
 
-So remember we believe that there are 10 topics each with 100 documents and each topic is present in only one document. So for any given document the distribution of topics is:
+**100% 0% 0% 0% 0% 0% 0% 0% 0% 0%**
 
-100% topic X and 0% on any of the other topics.
+Remember we have no idea what these topics are and what the belonging to these topics are so lets guess by going through the corpus and assigning each word randomly to our mystery 10 topics.
 
-We have no idea what these topics are and what these words are so lets go through the corpus and let's assign each word randomly to our 10 topics.
+If we then examine each of the words in each document and use the word to assign topics to that document then this random distribution should give us something like:
 
-If we then assign a topic to each document based on words in that topic's bag then this random distribution should give us something like:
+**10% 10% 10% 10% 10% 10% 10% 10% 10% 10%**
 
-10% of the words in each document are assigned to each topic so this first totally random iteration suggests that each of our 10 topics is in each of our 1000 documents covering 10% of the words.
+So instead of each topic having 100 documents it has 1000 documents. Instead of each document having 1 topic it has all 10 topics.
 
-If we move one of the words into another topic that distribution may change slightly. We may go from our totally random 10 topics in each document covering 10% of the words per topic to, say, one of the topics now being 10.01% of the document, one being 9.99%, the rest being 10%. But we have gone one stage closer to our ideal of 100% for one topic and 0% for the others.
+## Iterating to the answer
 
-In reality this perfect end result will never happen but if, after many thousands of iterations, we have minimised the spread of topics across documents then each bag of words in each topic will represent that topic. We just have to read the words and guess what that pic is.  
+Now we move one of the words into another topic, again at random. We repeat the assignment of topics to each document.
+
+if the random move was a poor one then the distribution of topics stays equally poor. If the move was a good one and the word has increased the number of words with similar meanings in the new topic then we may go from our totally random 10 topics at 10% in each document to, say, one of the topics now being 10.01% of the document, one being 9.99%, the rest being 10%. We have gone one stage closer to our ideal of 100% for one topic and 0% for the others. Repeat this enough times and we'll start to converge on the actual result.
+
+In reality this perfect end result will never happen but if, after many thousands of iterations, we have minimised the spread of topics across documents then each bag of words in each topic will, mostly, represent that topic. We just have to read the words and guess what that pic is.  
 
 
 
