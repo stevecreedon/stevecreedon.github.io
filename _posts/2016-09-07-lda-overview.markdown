@@ -33,7 +33,7 @@ So we believe that there are 10 topics and each document has only one topic. So 
 
 **100% 0% 0% 0% 0% 0% 0% 0% 0% 0%**
 
-Remember we have no idea what these topics are and what the belonging to these topics are so lets guess by going through the corpus and assigning each word randomly to our mystery 10 topics.
+Remember we have no idea what these topics are and what the words belonging to these topics are so lets guess by going through the corpus and assigning each word randomly to our mystery 10 topics.
 
 If we then examine each of the words in each document and use the word to assign topics to that document then this random distribution should give us something like:
 
@@ -47,7 +47,7 @@ Now we move one of the words into another topic, again at random. We repeat the 
 
 if the random move was a poor one then the distribution of topics stays equally poor. If the move was a good one and the word has increased the number of words with similar meanings in the new topic then we may go from our totally random 10 topics at 10% in each document to, say, one of the topics now being 10.01% of the document, one being 9.99%, the rest being 10%. We have gone one stage closer to our ideal of 100% for one topic and 0% for the others. Repeat this enough times and we'll start to converge on the actual result.
 
-In reality this perfect end result will never happen. For a start, most real documents will have more than one topic and topics won't always be the same size but after many thousands of iterations we would have minimised the distribution of topics across documents so each bag of words in each topic will, mostly, represent that topic. We just have to read the words and guess what that topic is.  
+In reality this perfect end result will never happen. For a start, most real documents will have more than one topic and topics won't always be the same size but after many thousands of iterations we would have minimised the distribution of topics across documents and each random move will be a poor one. At that stage each bag of words in each topic will, mostly, represent that topic. We just have to read the words and guess what that topic is.  
 
 
 
