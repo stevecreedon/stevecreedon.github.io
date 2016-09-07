@@ -29,7 +29,7 @@ To keep things simple we'll make some very simple assumptions:
 
 ## Getting Started
 
-So we believe that there are 10 topics and each document has only one topic. So for any given document the distribution of topics in that document is:
+So we believe that there are 10 topics and each document has only one topic. So for any given document the distribution of topics in that document should be:
 
 **100% 0% 0% 0% 0% 0% 0% 0% 0% 0%**
 
