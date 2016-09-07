@@ -47,7 +47,7 @@ Now we move one of the words into another topic, again at random. We repeat the 
 
 if the random move was a poor one then the distribution of topics stays equally poor. If the move was a good one and the word has increased the number of words with similar meanings in the new topic then we may go from our totally random 10 topics at 10% in each document to, say, one of the topics now being 10.01% of the document, one being 9.99%, the rest being 10%. We have gone one stage closer to our ideal of 100% for one topic and 0% for the others. Repeat this enough times and we'll start to converge on the actual result.
 
-In reality this perfect end result will never happen. For a start, most real documents will have more than one topic and topics won't always be the same size but if, after many thousands of iterations, we have minimised the distribution of topics across documents then each bag of words in each topic will, mostly, represent that topic. We just have to read the words and guess what that pic is.  
+In reality this perfect end result will never happen. For a start, most real documents will have more than one topic and topics won't always be the same size but after many thousands of iterations we would have minimised the distribution of topics across documents so each bag of words in each topic will, mostly, represent that topic. We just have to read the words and guess what that pic is.  
 
 
 
