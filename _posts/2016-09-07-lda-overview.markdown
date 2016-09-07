@@ -22,8 +22,8 @@ To keep things simple we'll make some very simple assumptions:
 1. We have 10 topics in these 1000 documents.   
 1. Each topic is made up of a bag of words. No two topics have the same word e.g:
 
-    1. If one of the unknown topics was topics was, say, **'Dirty'** we would expect the words in the bag to be 'dirty', 'stained', 'yellowing', 'filthy', 'marked'.
-    1. Another topic my be **'Rude'** and would have the words 'rude', 'unhelpful', 'unpleasant', 'aggressive'.
+    1. If one of the unknown topics was, say, **'Dirty'** we would expect the words in the bag to be 'dirty', 'stained', 'yellowing', 'filthy', 'marked'.
+    1. Another topic my be **'Rude'** and we'd have the words 'rude', 'unhelpful', 'unpleasant', 'aggressive'.
 
 1. Let's make a really big assumption just to make this example as clear as possible - we'd never do this in a real life example. Let's assume these topics are evenly distributed and each document only has 1 topic. In other words, in our 1000 documents there are 10 topics, each topic having 100 documents.
 
