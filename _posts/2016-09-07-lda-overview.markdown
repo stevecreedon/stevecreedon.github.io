@@ -33,7 +33,7 @@ So we believe that there are 10 topics and each document has only one topic. So 
 
 **100% 0% 0% 0% 0% 0% 0% 0% 0% 0%**
 
-Remember we have no idea what these topics are and what the belonging to these topics are so lets guess by going through the corpus and assigning each word randomly to our mystery 10 topics.
+Remember we have no idea what these topics are and what the words belonging to these topics are so lets make a totally inaccurate guess by going through the corpus and assigning each word randomly to our mystery 10 topics.
 
 If we then examine each of the words in each document and use the word to assign topics to that document then this random distribution should give us something like:
 
