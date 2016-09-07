@@ -5,9 +5,11 @@ date: 2016-09-07 21:37:00 +0100
 categories: lda nlp
 ---
 
-t resolver.co.uk we need some form of topic discovery from our large corpus of email conversations. I'm not trying to understand LDA analysis in its full scientific or mathematical depth but just how it works so we can attempt to get the best out of it. 
+At [resolver](resolver.co.uk) we need some form of topic discovery from our large corpus of email conversations. Having done some reading and met with [some of the team at Graphaware](http://graphaware.com) it would seem that [Latent Dirichlet allocation](https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation) is an option, I'm going to call it LDA for now.
 
-This is my best shot:
+I'm not going to try and understand LDA in its full scientific or mathematical detail but I'd like to know a little bit about how it works so I can help get the best out of it even while wearing my CTO hat with built-in dark glasses, ear muffs and blinkers for use in emergency. 
+
+I learn by writing things down so let's see where this goes:
 
 ## Assumptions
 
