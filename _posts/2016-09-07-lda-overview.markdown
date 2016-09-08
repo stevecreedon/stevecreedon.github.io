@@ -7,9 +7,9 @@ categories: lda nlp
 
 At [resolver](resolver.co.uk) we need some form of topic discovery from our large corpus of email conversations. Having done some reading and met with [some of the team at Graphaware](http://graphaware.com) it would seem that [Latent Dirichlet allocation](https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation) is an option, I'm going to call it LDA for now.
 
-I'm not going to try and understand LDA in its full scientific or mathematical detail but I'd like to know a little bit about how it works so I can help get the best out of it even while wearing my CTO hat with built-in dark glasses, ear muffs and blinkers for use in emergency. 
+I don't want to understand LDA in its full scientific or mathematical detail but I'd like to know a little bit about how it works so I can help get the best out of it (even while wearing my CTO hat with built-in dark glasses, ear muffs and blinkers for use in emergency). 
 
-I learn by writing things down so let's see where this goes:
+I also learn by writing things down so let's see where this goes:
 
 ## We Know
 
@@ -29,9 +29,9 @@ To keep things simple we'll make some very simple assumptions:
 
 ## Getting Started
 
-So we believe that there are 10 topics and each document has only one topic. So for any given document the distribution of topics in that document should be:
+So we believe that there are 10 topics and each document has only one topic. So for any given document the distribution of our 10 topics in that document should be:
 
-**100% 0% 0% 0% 0% 0% 0% 0% 0% 0%**
+**100% 0% 0% 0% 0% 0% 0% 0% 0% 0%**   (the order does not matter here)
 
 Remember we have no idea what these topics are and what the words belonging to these topics are so lets guess by going through the corpus and assigning each word randomly to our mystery 10 topics.
 
